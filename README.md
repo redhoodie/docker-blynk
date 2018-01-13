@@ -1,13 +1,13 @@
 # Blynk Server Docker
 
-![](https://raw.githubusercontent.com/riftbit/docker-blynk/master/logo.png)
+[![](https://raw.githubusercontent.com/riftbit/docker-blynk/master/logo.png)](https://www.blynk.cc/)
 
  [![](https://images.microbadger.com/badges/image/riftbit/blynk.svg)](https://microbadger.com/images/riftbit/blynk) [![Docker Pulls](https://img.shields.io/docker/pulls/riftbit/blynk.svg)](https://hub.docker.com/r/riftbit/blynk/) [![Docker Stars](https://img.shields.io/docker/stars/riftbit/blynk.svg)](https://hub.docker.com/r/riftbit/blynk/) [![GitHub last commit](https://img.shields.io/github/last-commit/riftbit/docker-blynk.svg)](https://github.com/riftbit/docker-blynk) [![Docker Build Status](https://img.shields.io/docker/build/riftbit/blynk.svg)](https://hub.docker.com/r/riftbit/blynk/)
 
 Project Links: [Docker](https://hub.docker.com/r/riftbit/blynk/) | [Github](https://github.com/riftbit/docker-blynk) | [Blynk](https://www.blynk.cc/)
 
 ## About Blink Project
-![](https://static1.squarespace.com/static/54765ba7e4b0d055ee0b47a6/54a0c183e4b045b45021b121/56f7230b1711077fa4d1549d/1459036942430/5.5+Device+1.jpg?format=500w)
+[![](https://static1.squarespace.com/static/54765ba7e4b0d055ee0b47a6/54a0c183e4b045b45021b121/56f7230b1711077fa4d1549d/1459036942430/5.5+Device+1.jpg?format=500w)](https://www.blynk.cc/)
 
 **Blynk** was designed for the Internet of Things. It can control hardware remotely, it can display sensor data, it can store data, vizualize it and do many other cool things.
 
