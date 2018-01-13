@@ -20,9 +20,13 @@ ARG BLYNK_SERVER_VERSION=0.29.6
 
 RUN apk update && apk upgrade && \
 		apk add --no-cache --update openjdk8-jre curl && \
-		mkdir -p /blynk/data && mkdir /blynk/config && \
+		mkdir -p /blynk/data && \
+		mkdir /blynk/config && \
+		mkdir /logs && \
+		touch /blynk/config/server.properties && \
+		touch /logs/worker.log && \
+		touch /logs/blynk.log && \
     curl -L https://github.com/blynkkk/blynk-server/releases/download/v${BLYNK_SERVER_VERSION}/server-${BLYNK_SERVER_VERSION}-java8.jar > /blynk/server.jar && \
-    touch /blynk/config/server.properties && \
 		apk del --purge curl && \
 		rm -rf /var/cache/apk/*
 
@@ -30,4 +34,4 @@ VOLUME ["/blynk/config", "/blynk/data"]
 
 EXPOSE 7443 8080 8081 8082 8441 8442 8443 9443
 
-CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties && tail -f /dev/null
+CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties & tail -f /logs/blynk.log & tail -f /logs/worker.log
