@@ -84,9 +84,10 @@ In case you forgot, or don’t know how to install Arduino libraries [click here
  - **8080/tcp** - HTTP port
  - **8081/tcp** - Web socket ssl/tls port
  - **8082/tcp** - Web sockets plain tcp/ip port
+ - **8440/tcp** - Mqtt hardware server 
  - **8441/tcp** - Hardware ssl/tls port (for hardware that supports SSL/TLS sockets)
- - **8443/tcp** - Application mutual ssl/tls port
  - **8442/tcp** - Hardware plain tcp/ip port
+ - **8443/tcp** - Application mutual ssl/tls port
  - **9443/tcp** - HTTPS port
 
 ### Volumes
