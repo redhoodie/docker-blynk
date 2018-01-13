@@ -40,4 +40,4 @@ EXPOSE 8442/tcp
 EXPOSE 8443/tcp
 EXPOSE 9443/tcp
 
-CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties & tail -f /logs/blynk.log & tail -f /logs/worker.log
+CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties && tail -f /logs/blynk.log & tail -f /logs/worker.log
