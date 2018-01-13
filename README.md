@@ -76,7 +76,7 @@ In case you forgot, or don’t know how to install Arduino libraries [click here
 
 ### Build Args
 
- - **BLYNK_VERSION** = 0.29.6
+ - **VERSION** = 0.29.6 - Blynk Version
 
 ### Exposed Ports
 
