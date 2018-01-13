@@ -97,8 +97,9 @@ In case you forgot, or don’t know how to install Arduino libraries [click here
  
 ### Additional Info
 
- > Default Admin login email is admin@blynk.cc
- > Default Admin password is admin
+> Default Admin login email is admin@blynk.cc
+>
+> Default Admin password is admin
 
 ### Container Changelog (dd.mm.yy)
 
