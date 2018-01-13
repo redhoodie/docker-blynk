@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  serviio:
+    image: riftbit/docker-blynk:latest
+    ports:
+    volumes:
