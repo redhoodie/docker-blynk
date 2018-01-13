@@ -17,15 +17,19 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 	maintainer="Riftbit ErgoZ"
 
 RUN apk update && apk upgrade && \
-    apk add --no-cache --update openjdk8-jre curl && \
+    apk add --no-cache --update openjdk8-jre curl unzip && \
     mkdir -p /blynk/data && \
     mkdir /blynk/config && \
     mkdir /logs && \
-    touch /blynk/config/server.properties && \
-    touch /logs/worker.log && \
+    touch /logs/server.log && \
     touch /logs/blynk.log && \
-    curl -L https://github.com/blynkkk/blynk-server/releases/download/v${VERSION}/server-${VERSION}-java8.jar > /blynk/server.jar && \
-    apk del --purge curl && \
+    touch /logs/worker.log && \
+		curl -L https://github.com/blynkkk/blynk-server/releases/download/v${VERSION}/server-${VERSION}-java8.jar > /blynk/server.jar && \
+		curl -L https://github.com/blynkkk/blynk-server/archive/v${VERSION}.zip > /tmp/server.zip && \
+    unzip /tmp/server.zip && \
+		mv /blynk-server-${VERSION}/server/core/src/main/resources/server.properties /blynk/config/server.properties && \
+    apk del --purge curl unzip && \
+		rm -rf /blynk-server-${VERSION} && \
     rm -rf /var/cache/apk/*
 
 VOLUME ["/blynk/config", "/blynk/data"]
@@ -40,4 +44,5 @@ EXPOSE 8442/tcp
 EXPOSE 8443/tcp
 EXPOSE 9443/tcp
 
-CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties && tail -f /logs/blynk.log & tail -f /logs/worker.log
+CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties > /logs/server.log & \
+    tail -f /logs/server.log /logs/blynk.log /logs/worker.log
