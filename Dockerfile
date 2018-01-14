@@ -34,15 +34,7 @@ RUN apk update && apk upgrade && \
 
 VOLUME ["/blynk/config", "/blynk/data"]
 
-EXPOSE 7443/tcp
-EXPOSE 8080/tcp
-EXPOSE 8081/tcp
-EXPOSE 8082/tcp
-EXPOSE 8440/tcp
-EXPOSE 8441/tcp
-EXPOSE 8442/tcp
-EXPOSE 8443/tcp
-EXPOSE 9443/tcp
+EXPOSE 7443/tcp 8080/tcp 8081/tcp 8082/tcp 8440/tcp 8441/tcp 8442/tcp 8443/tcp 9443/tcp
 
 CMD java -jar /blynk/server.jar -dataFolder /blynk/data -serverConfig /blynk/config/server.properties > /logs/server.log & \
     tail -f /logs/server.log /logs/blynk.log /logs/worker.log
