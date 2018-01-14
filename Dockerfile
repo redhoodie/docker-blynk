@@ -6,8 +6,8 @@ ARG VCS_REF
 ARG VERSION=0.29.6
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
-	org.label-schema.name="IoT Blynk Server Container" \
-	org.label-schema.description="IoT Blynk Server Container" \
+	org.label-schema.name="blynk" \
+	org.label-schema.description="Smallst and Fastest Docker Container with IoT Blynk Private Server" \
 	org.label-schema.url="https://riftbit.com/" \
 	org.label-schema.vcs-ref=$VCS_REF \
 	org.label-schema.vcs-url="https://github.com/riftbit/docker-blynk" \
