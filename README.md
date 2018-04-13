@@ -76,7 +76,7 @@ In case you forgot, or don’t know how to install Arduino libraries [click here
 
 ### Build Args
 
- - **VERSION** = 0.29.6 - Blynk Version
+ - **VERSION** = 0.34.2 - Blynk Version
 
 ### Exposed Ports
 
@@ -103,4 +103,5 @@ In case you forgot, or don’t know how to install Arduino libraries [click here
 
 ### Container Changelog (dd.mm.yy)
 
- - **13.01.18** - First build of container
+ - **13.04.2018** - update Blynk server to 0.34.2 version
+ - **13.01.2018** - First build of container
