@@ -3,7 +3,7 @@ MAINTAINER "Riftbit ErgoZ <ergozru@riftbit.com>"
 
 ARG BUILD_DATE
 ARG VCS_REF
-ARG VERSION=0.29.6
+ARG VERSION=0.34.2
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.name="blynk" \
