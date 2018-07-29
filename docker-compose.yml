@@ -2,6 +2,6 @@ version: '2'
 
 services:
   serviio:
-    image: riftbit/docker-blynk:latest
+    image: redhoodie/docker-blynk:latest
     ports:
     volumes:
