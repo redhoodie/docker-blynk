@@ -1,16 +1,16 @@
 FROM alpine
-MAINTAINER "Riftbit ErgoZ <ergozru@riftbit.com>"
+MAINTAINER "Michael Brown <redhoodie@gmail.com>"
 
 ARG BUILD_DATE
 ARG VCS_REF
-ARG VERSION=0.34.2
+ARG VERSION=0.39.3
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.name="blynk" \
 	org.label-schema.description="Smallst and Fastest Docker Container with IoT Blynk Private Server" \
 	org.label-schema.url="https://riftbit.com/" \
 	org.label-schema.vcs-ref=$VCS_REF \
-	org.label-schema.vcs-url="https://github.com/riftbit/docker-blynk" \
+	org.label-schema.vcs-url="https://github.com/redhoodie/docker-blynk" \
 	org.label-schema.vendor="Riftbit Studio" \
 	org.label-schema.version=$VERSION \
 	org.label-schema.schema-version="1.0" \
